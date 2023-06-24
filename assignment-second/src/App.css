@@ -1,0 +1,6 @@
+.app {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Additional styling for Header and Content components */
