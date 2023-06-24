@@ -17,6 +17,7 @@ body {
     position: relative;
     height: 56px;
     padding: 10px;
+    background-color: #fff;
 }
 
 
@@ -30,7 +31,7 @@ body {
 
 .logo-container {
     position: fixed;
-    top: 0;
+    top: -0.1em;
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
@@ -41,7 +42,7 @@ body {
     align-items: center;
     transition: 0.3s ease;
     cursor: pointer;
-    width: 7em;
+    width: 5.2em;
 }
 
 .sticky .logo-container {
@@ -90,13 +91,13 @@ body {
 #menu {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 10px;
     letter-spacing: .04em;
     line-height: 22px;
     border-top: 3px double black;
     border-bottom: 3px double black;
     cursor: pointer;
-    width: 50px;
+    width: 30px;
     text-align: center;
     transition: 0.3s ease;
 }
@@ -107,4 +108,17 @@ body {
     padding-top: .2em;
     padding-bottom: .2em;
     transition: 0.3s ease;
+}
+
+@media (max-width: 599px) {
+    #brand {
+        font-size: 12.85px;
+
+    }
+}
+@media (max-width: 399px) {
+
+    #brand {
+        font-size: 8px;
+    }
 }

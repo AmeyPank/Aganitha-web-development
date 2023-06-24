@@ -11,13 +11,14 @@ const Content = () => {
                 <p id='dateTime'>AUGUST 19, 2022</p>
                 <h1 id='topper-title-news'>FACT SHEET: How the Inflation Reduction Act Helps Asian American,
                     Native Hawaiian, and Pacific Islander Communities</h1>
-                <div className="breadcrumb">
-                    <p><img src={Whitehouse} alt='whitehouse' /></p>
+                <nav className="breadcrumb">
+                    <p id='image'><img src={Whitehouse} alt='whitehouse' /></p>
                     <p className="arrow-right"></p>
-                    <p>BRIEFING ROOM</p>
+                    <p className='links'><a href='https://www.whitehouse.gov/briefing-room/'>BRIEFING ROOM</a></p>
                     <p className="arrow-right"></p>
-                    <p>STATEMENTS AND RELEASES</p>
-                </div>
+                    <p className='links'><a href='https://www.whitehouse.gov/briefing-room/statements-releases/'>STATEMENTS AND RELEASES</a></p>
+                </nav>
+
 
             </div>
             <div className='text-container'>
