@@ -1,10 +1,19 @@
 import React from 'react';
 import "./Content.css";
-
-import Whitehouse from "../whitehouse-bread1.png";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Whitehouse from "../whitehouse-bread.png";
 const Content = () => {
+
+
+    const handleCopy = (event) => {
+        event.preventDefault();
+        // Optional: Show a message or perform any other action when copy is attempted
+        toast.warning("Copy Paste Not Allowed");
+    }
     return (
-        <main>
+        <main onCopy={handleCopy}>
+            <ToastContainer />
 
             <div>
 

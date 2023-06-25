@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./Header.css"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Logo from "../logo-the-white-house.png";
 const Header = () => {
 
@@ -38,8 +40,14 @@ const Header = () => {
         };
     }, []);
 
+    const handleCopy = (event) => {
+        event.preventDefault();
+        // Optional: Show a message or perform any other action when copy is attempted
+        toast.warning("Copy Paste Not Allowed");
+    };
+
     return (
-        <header className={isScrolled ? 'scrolled' : ''}>
+        <header className={isScrolled ? 'scrolled' : ''} onCopy={handleCopy}>
             <nav id="navbar" className="navbar">
                 <p id="brand">THE WHITE HOUSE</p>
 
@@ -49,6 +57,7 @@ const Header = () => {
                 <img id='logo' src={Logo} alt='logo' />
             </div>
             {/* Rest of your JSX content */}
+            <ToastContainer />
         </header>
     );
 }
