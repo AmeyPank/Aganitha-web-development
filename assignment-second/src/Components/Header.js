@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Header.css"
 import Logo from "../logo-the-white-house.png";
 const Header = () => {
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
     useEffect(() => {
         window.onscroll = function () {
             myFunction();
@@ -19,8 +22,24 @@ const Header = () => {
         }
     }, []);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <header>
+        <header className={isScrolled ? 'scrolled' : ''}>
             <nav id="navbar" className="navbar">
                 <p id="brand">THE WHITE HOUSE</p>
 
